@@ -3,40 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Image Gallery</title>
+    <title>News Homepage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
             margin: 0 auto;
+            background-color: #fff;
             padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
         }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 0.5rem;
         }
-        @media (max-width: 600px) {
-            .gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .news-item {
+            border-bottom: 1px solid #ccc;
+            padding: 1rem 0;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <h1>Thầy Huy One Champ</h1>
-    <div class="gallery">
-        <img src="https://picsum.photos/200/200?random=1" alt="Random image 1">
-        <img src="https://picsum.photos/200/200?random=2" alt="Random image 2">
-        <img src="https://picsum.photos/200/200?random=3" alt="Random image 3">
-        <img src="https://picsum.photos/200/200?random=4" alt="Random image 4">
-        <img src="https://picsum.photos/200/200?random=5" alt="Random image 5">
-        <img src="https://picsum.photos/200/200?random=6" alt="Random image 6">
+    <div class="container">
+        <header>
+            <h1>News Homepage</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Entertainment</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article class="news-item">
+                <h2>Breaking News: Important Event Happens</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec magna vel ante sollicitudin lacinia.</p>
+            </article>
+            <article class="news-item">
+                <h2>Technology: New Gadget Unveiled</h2>
+                <p>Nullam tincidunt ante vel ipsum cursus, at interdum mauris scelerisque. Fusce pharetra convallis purus ac faucibus.</p>
+            </article>
+            <article class="news-item">
+                <h2>Sports: Local Team Wins Championship</h2>
+                <p>Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut imperdiet et leo in vulputate.</p>
+            </article>
+        </main>
+        <footer>
+            <p>&copy; 2023 News Homepage. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
