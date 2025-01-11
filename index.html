@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>My Image Gallery</h1>
+    <div class="gallery">
+        <img src="https://picsum.photos/200/200?random=1" alt="Random image 1">
+        <img src="https://picsum.photos/200/200?random=2" alt="Random image 2">
+        <img src="https://picsum.photos/200/200?random=3" alt="Random image 3">
+        <img src="https://picsum.photos/200/200?random=4" alt="Random image 4">
+        <img src="https://picsum.photos/200/200?random=5" alt="Random image 5">
+        <img src="https://picsum.photos/200/200?random=6" alt="Random image 6">
+    </div>
+</body>
+</html>
